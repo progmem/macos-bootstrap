@@ -1,0 +1,79 @@
+# For syntax highlighting, git clone git@github.com:scopatz/nanorc.git ~/.nano-syntax
+# include ~/.nano-syntax/*.nanorc
+# You can also use the following with Homebrew:
+include /usr/local/Cellar/nano/5.0/share/nano/*.nanorc
+
+set titlecolor    bold,black,white
+set numbercolor   bold,lightblack
+set errorcolor    bold,red
+set statuscolor   bold,lightblue
+set keycolor      bold,lightblue
+set functioncolor white
+set selectedcolor lightwhite,blue
+
+set afterends
+set atblanks
+set autoindent
+set bookstyle
+set constantshow
+set indicator
+set linenumbers
+set morespace
+set mouse
+set multibuffer
+set nonewlines # Needed, or else 5.0 crashes with SIGFPE
+set noconvert
+set nowrap
+set positionlog
+set quickblank
+set regexp
+set showcursor
+set smarthome
+set smooth
+set softwrap
+set suspend
+set tabsize 2
+set tabstospaces
+set zap
+
+unbind ^K main
+unbind ^U main
+unbind ^W main
+
+unbind M-H main
+unbind M-B main
+
+bind M-B prevword main
+bind M-F nextword main
+bind ^W cutwordleft main
+
+bind ^R insert main
+bind ^O "" main
+bind ^S writeout main
+bind ^Q exit main
+bind ^A help main
+
+bind ^P prevword main
+bind ^N nextword main
+bind ^B firstline main
+bind ^E lastline main
+bind ^L curpos main
+bind ^J gotoline main
+
+bind ^Space mark main
+bind ^X cut main
+bind ^C copy main
+bind ^V paste main
+
+bind ^F whereis main
+bind ^G findnext main
+bind M- findprevious main
+# bind ^H replace main
+
+bind ^Z undo main
+bind ^Y redo main
+
+bind M-A nohelp main
+bind M-L constantshow main
+
+bind M-Z suspend main

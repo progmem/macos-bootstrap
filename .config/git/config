@@ -1,0 +1,14 @@
+[user]
+# User Information
+  name = Jason DeLeon
+  email = jason@progmem.space
+
+[core]
+# Tell less to send the termcap initialization and deinitialization.
+# This allows less to take up the entire buffer and exit without overwriting the screen.
+# NOTE: Use '-+X' only with GNU less, and only v530 or greater.
+# -+X will break -F and cause the pager to silently fail.
+  pager = less -FRI -+X
+
+[alias]
+  graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
