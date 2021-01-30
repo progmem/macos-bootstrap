@@ -11,8 +11,13 @@ for src in (find ~/.config/fish/config -name '*.fish')
   source $src
 end
 
+# Exports
+set -x VISUAL 'nano'
+set -x EDITOR 'nano'
+set -x LESS   '-SNI'
+
 # RVM Gemfile actuation
 rvm reload && check_rvm
 
-set VISUAL 'nano'
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+
